@@ -4,560 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Quantum Excitations Theory Group</title>
-  <meta name="description" content="Modern academic website template for a research group in excitons, optical spectroscopy, and first-principles simulations." />
-  <style>
-    :root {
-      --bg: #0b1020;
-      --bg-soft: #121933;
-      --panel: rgba(255, 255, 255, 0.06);
-      --panel-strong: rgba(255, 255, 255, 0.1);
-      --text: #eef2ff;
-      --muted: #b9c1df;
-      --accent: #7cc4ff;
-      --accent-2: #a78bfa;
-      --border: rgba(255, 255, 255, 0.12);
-      --shadow: 0 20px 50px rgba(0,0,0,0.28);
-      --radius: 22px;
-      --radius-sm: 14px;
-      --maxw: 1180px;
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(124,196,255,0.18), transparent 30%),
-        radial-gradient(circle at top right, rgba(167,139,250,0.18), transparent 28%),
-        linear-gradient(180deg, #0a1022 0%, #0f1730 50%, #0c1225 100%);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
-
-    .container {
-      width: min(var(--maxw), calc(100% - 32px));
-      margin: 0 auto;
-    }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(14px);
-      background: rgba(10, 16, 34, 0.72);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-      padding: 14px 0;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      min-width: 0;
-    }
-
-    .brand-badge {
-      width: 42px;
-      height: 42px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      box-shadow: var(--shadow);
-      position: relative;
-      flex: 0 0 auto;
-    }
-
-    .brand-badge::before,
-    .brand-badge::after {
-      content: "";
-      position: absolute;
-      inset: 10px;
-      border-radius: 999px;
-      border: 2px solid rgba(255,255,255,0.8);
-    }
-
-    .brand-badge::after {
-      inset: 15px;
-      border-color: rgba(255,255,255,0.45);
-    }
-
-    .brand-text {
-      min-width: 0;
-    }
-
-    .brand-text strong {
-      display: block;
-      font-size: 0.96rem;
-      letter-spacing: 0.02em;
-    }
-
-    .brand-text span {
-      display: block;
-      color: var(--muted);
-      font-size: 0.84rem;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-
-    .nav-links a {
-      padding: 10px 14px;
-      color: var(--muted);
-      border-radius: 999px;
-      transition: 0.2s ease;
-      font-size: 0.95rem;
-    }
-
-    .nav-links a:hover,
-    .nav-links a.active {
-      color: var(--text);
-      background: var(--panel);
-    }
-
-    .menu-toggle {
-      display: none;
-      border: 1px solid var(--border);
-      background: var(--panel);
-      color: var(--text);
-      padding: 10px 14px;
-      border-radius: 999px;
-      cursor: pointer;
-    }
-
-    main { padding-bottom: 48px; }
-
-    .hero {
-      padding: 64px 0 34px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.4fr 1fr;
-      gap: 26px;
-      align-items: stretch;
-    }
-
-    .hero-card,
-    .panel {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    .hero-card {
-      padding: 34px;
-      min-height: 420px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-card::after {
-      content: "";
-      position: absolute;
-      width: 280px;
-      height: 280px;
-      right: -80px;
-      top: -70px;
-      background: radial-gradient(circle, rgba(124,196,255,0.28), transparent 65%);
-      pointer-events: none;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.06);
-      color: var(--muted);
-      border: 1px solid var(--border);
-      font-size: 0.9rem;
-      margin-bottom: 18px;
-    }
-
-    h1, h2, h3, h4 {
-      margin: 0 0 12px;
-      line-height: 1.15;
-    }
-
-    h1 {
-      font-size: clamp(2.3rem, 4vw, 4.2rem);
-      max-width: 11ch;
-      letter-spacing: -0.04em;
-    }
-
-    .hero-lead {
-      font-size: 1.08rem;
-      color: var(--muted);
-      max-width: 60ch;
-      margin: 16px 0 24px;
-    }
-
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 26px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 12px 18px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      font-weight: 600;
-      transition: transform 0.2s ease, background 0.2s ease;
-    }
-
-    .btn:hover { transform: translateY(-1px); }
-    .btn-primary {
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      color: #08111e;
-      border: none;
-    }
-
-    .btn-secondary {
-      background: rgba(255,255,255,0.04);
-      color: var(--text);
-    }
-
-    .metrics {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 18px;
-    }
-
-    .metric {
-      padding: 16px;
-      border-radius: 18px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid var(--border);
-    }
-
-    .metric strong {
-      display: block;
-      font-size: 1.5rem;
-      margin-bottom: 4px;
-    }
-
-    .hero-side {
-      display: grid;
-      gap: 20px;
-    }
-
-    .figure-box {
-      min-height: 250px;
-      padding: 22px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .figure-grid {
-      position: absolute;
-      inset: 0;
-      opacity: 0.22;
-      background-image: linear-gradient(rgba(255,255,255,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.2) 1px, transparent 1px);
-      background-size: 28px 28px;
-      mask-image: radial-gradient(circle at center, black 50%, transparent 88%);
-    }
-
-    .hex {
-      width: 122px;
-      height: 122px;
-      background: linear-gradient(135deg, rgba(124,196,255,0.95), rgba(167,139,250,0.9));
-      clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0 50%);
-      position: absolute;
-      right: 36px;
-      top: 46px;
-      transform: rotate(11deg);
-      box-shadow: 0 30px 60px rgba(0,0,0,0.35);
-    }
-
-    .hex.small {
-      width: 88px;
-      height: 88px;
-      right: 122px;
-      top: 130px;
-      background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(124,196,255,0.35));
-    }
-
-    .figure-caption {
-      position: absolute;
-      left: 22px;
-      bottom: 22px;
-      right: 22px;
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-
-    .mini-stack {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-    }
-
-    .mini-card {
-      padding: 18px;
-      border-radius: 18px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid var(--border);
-    }
-
-    .mini-card h3 {
-      font-size: 1.02rem;
-      margin-bottom: 8px;
-    }
-
-    section {
-      padding: 22px 0;
-    }
-
-    .section-head {
-      display: flex;
-      gap: 18px;
-      align-items: end;
-      justify-content: space-between;
-      margin-bottom: 18px;
-      flex-wrap: wrap;
-    }
-
-    .section-head p {
-      margin: 0;
-      color: var(--muted);
-      max-width: 65ch;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .card {
-      padding: 22px;
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      transition: transform 0.2s ease, border-color 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-3px);
-      border-color: rgba(124,196,255,0.4);
-    }
-
-    .card p:last-child { margin-bottom: 0; }
-
-    .tag-row,
-    .filters {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .tag,
-    .filter-btn {
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 12px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.04);
-      color: var(--muted);
-      font-size: 0.9rem;
-      cursor: pointer;
-      transition: 0.2s ease;
-    }
-
-    .filter-btn.active,
-    .filter-btn:hover,
-    .tag:hover {
-      color: var(--text);
-      border-color: rgba(124,196,255,0.42);
-      background: rgba(124,196,255,0.12);
-    }
-
-    .research-card {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      min-height: 270px;
-    }
-
-    .research-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 16px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, rgba(124,196,255,0.2), rgba(167,139,250,0.2));
-      border: 1px solid var(--border);
-      font-size: 1.3rem;
-    }
-
-    .pub-card,
-    .member-card,
-    .news-card,
-    .join-card {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .pub-meta,
-    .member-meta,
-    .news-meta {
-      color: var(--muted);
-      font-size: 0.94rem;
-    }
-
-    .pub-links,
-    .member-links {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-top: auto;
-    }
-
-    .link-chip {
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid var(--border);
-      color: var(--text);
-      font-size: 0.9rem;
-    }
-
-    .member-top {
-      display: flex;
-      gap: 14px;
-      align-items: center;
-    }
-
-    .avatar {
-      width: 66px;
-      height: 66px;
-      border-radius: 20px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(135deg, rgba(124,196,255,0.28), rgba(167,139,250,0.28));
-      border: 1px solid var(--border);
-      font-weight: 800;
-      letter-spacing: 0.04em;
-    }
-
-    .member-role {
-      color: var(--accent);
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
-
-    .callout {
-      padding: 24px;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      background: linear-gradient(135deg, rgba(124,196,255,0.12), rgba(167,139,250,0.12));
-      box-shadow: var(--shadow);
-    }
-
-    .join-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 18px;
-    }
-
-    .list-clean {
-      margin: 0;
-      padding-left: 18px;
-      color: var(--muted);
-    }
-
-    .list-clean li + li { margin-top: 8px; }
-
-    .footer {
-      border-top: 1px solid var(--border);
-      margin-top: 36px;
-      padding: 22px 0 50px;
-      color: var(--muted);
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 1fr 1fr;
-      gap: 18px;
-    }
-
-    .hidden { display: none !important; }
-
-    @media (max-width: 980px) {
-      .hero-grid,
-      .join-grid,
-      .grid-3,
-      .grid-2,
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .metrics {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 760px) {
-      .menu-toggle { display: inline-flex; }
-
-      .nav {
-        align-items: flex-start;
-      }
-
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-        width: 100%;
-        padding-top: 10px;
-      }
-
-      .nav-links.open { display: flex; }
-
-      .hero { padding-top: 36px; }
-      .hero-card { padding: 24px; min-height: auto; }
-      .figure-box { min-height: 220px; }
-      h1 { max-width: 100%; }
-      .mini-stack { grid-template-columns: 1fr; }
-    }
-  </style>
+  <meta name="description" content="Research group website for excitons, optical spectroscopy, first-principles simulations, and interactive apps." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="site-header">
@@ -566,7 +14,7 @@
         <div class="brand-badge"></div>
         <div class="brand-text">
           <strong>Quantum Excitations Theory Group</strong>
-          <span>Excitons · Optical Spectroscopy · First-Principles Simulation</span>
+          <span>Excitons · Optical Spectroscopy · First-Principles Simulation · Interactive Apps</span>
         </div>
       </a>
 
@@ -578,6 +26,7 @@
         <a href="#publications">Publications</a>
         <a href="#members">Members</a>
         <a href="#software">Software</a>
+        <a href="#apps">Apps</a>
         <a href="#join">Join Us</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -607,6 +56,7 @@
             <a class="tag" href="#research" data-filter-target="Transport">Transport</a>
             <a class="tag" href="#research" data-filter-target="Simulation">Simulation</a>
             <a class="tag" href="#research" data-filter-target="Software">Software</a>
+            <a class="tag" href="#apps">Interactive apps</a>
           </div>
 
           <div class="metrics">
@@ -616,7 +66,7 @@
             </div>
             <div class="metric">
               <strong>12+</strong>
-              <span>Ongoing projects & tools</span>
+              <span>Projects & tools</span>
             </div>
             <div class="metric">
               <strong>Open</strong>
@@ -767,10 +217,12 @@
           <button class="filter-btn" data-filter="Nonlinear optics">Nonlinear optics</button>
           <button class="filter-btn" data-filter="Transport">Transport</button>
           <button class="filter-btn" data-filter="Methods">Methods</button>
+          <button class="filter-btn" data-filter="Mehdi">Mehdi</button>
+          <button class="filter-btn" data-filter="Theory team">Theory team</button>
         </div>
 
         <div class="grid-2" style="margin-top:18px" id="pubGrid">
-          <article class="card pub-card" data-tags="Excitons Methods">
+          <article class="card pub-card" data-tags="Excitons Methods Mehdi Theory team">
             <div class="pub-meta">2026 · Phys. Rev. B</div>
             <h3>Excitonic signatures in layered boron nitride: symmetry, screening, and interlayer coupling</h3>
             <p>Template text for a paper description. Replace this with one short sentence that explains the scientific contribution and why it matters.</p>
@@ -785,7 +237,7 @@
             </div>
           </article>
 
-          <article class="card pub-card" data-tags="Nonlinear optics Methods">
+          <article class="card pub-card" data-tags="Nonlinear optics Methods Mehdi Theory team">
             <div class="pub-meta">2026 · Journal name</div>
             <h3>Excitonic effects in second-order optical response of low-dimensional materials</h3>
             <p>Short summary line for nonlinear optical spectroscopy, theory development, or computational analysis.</p>
@@ -800,7 +252,7 @@
             </div>
           </article>
 
-          <article class="card pub-card" data-tags="Linear optics Excitons">
+          <article class="card pub-card" data-tags="Linear optics Excitons Theory team">
             <div class="pub-meta">2025 · Journal name</div>
             <h3>Polarization-resolved optical selection rules in van der Waals heterostructures</h3>
             <p>Short one-line description focusing on spectra, oscillator strength, exciton character, or symmetry analysis.</p>
@@ -814,7 +266,7 @@
             </div>
           </article>
 
-          <article class="card pub-card" data-tags="Transport Excitons">
+          <article class="card pub-card" data-tags="Transport Excitons Mehdi">
             <div class="pub-meta">2025 · Journal name</div>
             <h3>Phonon-assisted transfer and non-equilibrium excitonic dynamics in layered materials</h3>
             <p>Use one sentence to summarize transfer rates, thermalization, transport, or time-resolved phenomena.</p>
@@ -843,8 +295,18 @@
           </p>
         </div>
 
-        <div class="grid-3">
-          <article class="card member-card">
+        <div class="filters" id="memberFilters">
+          <button class="filter-btn active" data-filter="All">All</button>
+          <button class="filter-btn" data-filter="Excitons">Excitons</button>
+          <button class="filter-btn" data-filter="Linear optics">Linear optics</button>
+          <button class="filter-btn" data-filter="Nonlinear optics">Nonlinear optics</button>
+          <button class="filter-btn" data-filter="Transport">Transport</button>
+          <button class="filter-btn" data-filter="Simulation">Simulation</button>
+          <button class="filter-btn" data-filter="Software">Software</button>
+        </div>
+
+        <div class="grid-3" id="memberGrid">
+          <article class="card member-card" data-tags="Excitons Nonlinear optics Simulation Software">
             <div class="member-top">
               <div class="avatar">MA</div>
               <div>
@@ -853,6 +315,12 @@
               </div>
             </div>
             <div class="member-meta">Excitons · GW-BSE · Nonlinear optics · 2D materials</div>
+            <div class="tag-row">
+              <span class="tag">Excitons</span>
+              <span class="tag">Nonlinear optics</span>
+              <span class="tag">Simulation</span>
+              <span class="tag">Software</span>
+            </div>
             <p>Short bio: one or two lines about your expertise, current projects, and scientific interests.</p>
             <div class="member-links">
               <a class="link-chip" href="mailto:your.email@domain.com">Email</a>
@@ -862,7 +330,7 @@
             </div>
           </article>
 
-          <article class="card member-card">
+          <article class="card member-card" data-tags="Excitons Linear optics Simulation">
             <div class="member-top">
               <div class="avatar">SL</div>
               <div>
@@ -871,6 +339,11 @@
               </div>
             </div>
             <div class="member-meta">Electronic structure · Optical spectroscopy · Theory</div>
+            <div class="tag-row">
+              <span class="tag">Excitons</span>
+              <span class="tag">Linear optics</span>
+              <span class="tag">Simulation</span>
+            </div>
             <p>Add a concise research description and contact links for the member.</p>
             <div class="member-links">
               <a class="link-chip" href="#">Email</a>
@@ -879,7 +352,7 @@
             </div>
           </article>
 
-          <article class="card member-card">
+          <article class="card member-card" data-tags="Transport Simulation Software">
             <div class="member-top">
               <div class="avatar">AB</div>
               <div>
@@ -888,6 +361,11 @@
               </div>
             </div>
             <div class="member-meta">Modeling · Dynamics · Computation</div>
+            <div class="tag-row">
+              <span class="tag">Transport</span>
+              <span class="tag">Simulation</span>
+              <span class="tag">Software</span>
+            </div>
             <p>Use this card for a co-supervisor, collaborator, PhD student, or alumni member.</p>
             <div class="member-links">
               <a class="link-chip" href="#">Email</a>
@@ -941,6 +419,61 @@
       </div>
     </section>
 
+    <section id="apps">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Interactive tools</div>
+            <h2>Web apps</h2>
+          </div>
+          <p>
+            You can dedicate a full tab to real interactive web apps: dashboards, spectrum explorers, exciton viewers, data browsers, teaching demos, and post-processing tools.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>Exciton explorer</h3>
+            <p>Interactive visualization of exciton energies, oscillator strengths, degeneracies, and k-space weights.</p>
+            <div class="tag-row">
+              <span class="tag">App</span>
+              <span class="tag">Excitons</span>
+            </div>
+            <div class="pub-links">
+              <a class="link-chip" href="#">Live demo</a>
+              <a class="link-chip" href="#">Repository</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Nonlinear spectra dashboard</h3>
+            <p>Interactive browser for χ² spectra, peak assignments, channel decomposition, and polarization-resolved analysis.</p>
+            <div class="tag-row">
+              <span class="tag">App</span>
+              <span class="tag">Nonlinear optics</span>
+            </div>
+            <div class="pub-links">
+              <a class="link-chip" href="#">Live demo</a>
+              <a class="link-chip" href="#">Docs</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Teaching and workflow apps</h3>
+            <p>Small online tools for band-path inspection, input generation, convergence tracking, and tutorial-style demos.</p>
+            <div class="tag-row">
+              <span class="tag">App</span>
+              <span class="tag">Teaching</span>
+            </div>
+            <div class="pub-links">
+              <a class="link-chip" href="#">Open app</a>
+              <a class="link-chip" href="#">Source</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section id="join">
       <div class="container join-grid">
         <div class="callout">
@@ -961,7 +494,7 @@
           </div>
         </div>
 
-        <div class="grid-1">
+        <div>
           <article class="card join-card">
             <h3>What to send</h3>
             <ul class="list-clean">
@@ -1030,78 +563,19 @@
     <div class="container footer-grid">
       <div>
         <strong>Quantum Excitations Theory Group</strong>
-        <p>Template for a modern academic website built as a single file for easy GitHub Pages deployment.</p>
+        <p>Modern academic template for GitHub Pages.</p>
       </div>
       <div>
         <strong>Quick links</strong>
-        <p><a href="#research">Research</a><br /><a href="#publications">Publications</a><br /><a href="#members">Members</a></p>
+        <p><a href="#research">Research</a><br /><a href="#publications">Publications</a><br /><a href="#members">Members</a><br /><a href="#apps">Apps</a></p>
       </div>
       <div>
         <strong>Customize next</strong>
-        <p>Replace placeholder text, add real links, upload figures, and change the title, accent color, and member list.</p>
+        <p>Replace placeholder text, add real links, upload figures, and update the member list.</p>
       </div>
     </div>
   </footer>
 
-  <script>
-    const menuToggle = document.getElementById('menuToggle');
-    const navLinks = document.getElementById('navLinks');
-    if (menuToggle) {
-      menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('open');
-      });
-    }
-
-    const navAnchors = document.querySelectorAll('.nav-links a');
-    navAnchors.forEach(anchor => {
-      anchor.addEventListener('click', () => {
-        navAnchors.forEach(a => a.classList.remove('active'));
-        anchor.classList.add('active');
-        navLinks.classList.remove('open');
-      });
-    });
-
-    function setupFilters(filterContainerId, itemsContainerId) {
-      const filterContainer = document.getElementById(filterContainerId);
-      const itemsContainer = document.getElementById(itemsContainerId);
-      if (!filterContainer || !itemsContainer) return;
-
-      const buttons = filterContainer.querySelectorAll('[data-filter]');
-      const items = itemsContainer.children;
-
-      buttons.forEach(button => {
-        button.addEventListener('click', () => {
-          const value = button.getAttribute('data-filter');
-          buttons.forEach(btn => btn.classList.remove('active'));
-          button.classList.add('active');
-
-          Array.from(items).forEach(item => {
-            const tags = item.getAttribute('data-tags') || '';
-            const show = value === 'All' || tags.includes(value);
-            item.classList.toggle('hidden', !show);
-          });
-        });
-      });
-    }
-
-    setupFilters('researchFilters', 'researchGrid');
-    setupFilters('pubFilters', 'pubGrid');
-
-    const tagLinks = document.querySelectorAll('[data-filter-target]');
-    tagLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        const target = link.getAttribute('data-filter-target');
-        const researchButtons = document.querySelectorAll('#researchFilters [data-filter]');
-        researchButtons.forEach(btn => {
-          const isActive = btn.getAttribute('data-filter') === target;
-          btn.classList.toggle('active', isActive);
-        });
-        Array.from(document.getElementById('researchGrid').children).forEach(item => {
-          const tags = item.getAttribute('data-tags') || '';
-          item.classList.toggle('hidden', !tags.includes(target));
-        });
-      });
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
