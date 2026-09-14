@@ -25,7 +25,7 @@
           content="Mehdi Arfaoui | Theoretical Condensed Matter Physicist">
 
     <meta property="og:description"
-          content="Research profile, publications and academic activities of Mehdi Arfaoui.">
+          content="Research profile and publications of Mehdi Arfaoui.">
 
     <meta property="og:type" content="website">
 
@@ -67,6 +67,7 @@
 
         body {
             margin: 0;
+
             font-family:
                 -apple-system,
                 BlinkMacSystemFont,
@@ -94,9 +95,10 @@
             padding: 0 28px;
         }
 
-        /* ---------------------------------------
+
+        /* =========================
            HEADER
-        --------------------------------------- */
+        ========================= */
 
         header {
             border-bottom: 1px solid #e6e8eb;
@@ -126,9 +128,10 @@
             font-size: 14px;
         }
 
-        /* ---------------------------------------
+
+        /* =========================
            HERO
-        --------------------------------------- */
+        ========================= */
 
         .hero {
             padding: 75px 0 65px;
@@ -153,12 +156,7 @@
         .hero-title {
             font-size: 23px;
             color: #4b515a;
-            margin-bottom: 18px;
-        }
-
-        .affiliation {
-            color: #707780;
-            margin-bottom: 28px;
+            margin-bottom: 26px;
         }
 
         .intro {
@@ -168,44 +166,81 @@
             margin-bottom: 28px;
         }
 
-        .profile-links {
+
+        /* =========================
+           SOCIAL / ACADEMIC LINKS
+        ========================= */
+
+        .social-links {
             display: flex;
+            align-items: center;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 14px;
+            margin-top: 28px;
         }
 
-        .profile-links a {
-            display: inline-block;
-            border: 1px solid #d6d9dd;
-            padding: 8px 13px;
-            border-radius: 4px;
-            color: #30353b;
-            font-size: 14px;
-            background: #fafafa;
+        .social-links a {
+            width: 44px;
+            height: 44px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid #e0e3e6;
+            border-radius: 50%;
+
+            background: #ffffff;
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease,
+                border-color 0.2s ease;
         }
 
-        .profile-links a:hover {
-            background: #f2f4f6;
+        .social-links a:hover {
+            transform: translateY(-3px);
+            border-color: #b8bec5;
+
+            box-shadow:
+                0 5px 15px rgba(0, 0, 0, 0.08);
+
             text-decoration: none;
         }
+
+        .social-links img {
+            width: 22px;
+            height: 22px;
+            object-fit: contain;
+        }
+
+
+        /* =========================
+           INITIAL CIRCLE
+        ========================= */
 
         .initial-box {
             width: 105px;
             height: 105px;
+
             border-radius: 50%;
+
             background: #f0f3f7;
             border: 1px solid #dfe3e7;
+
             display: flex;
             align-items: center;
             justify-content: center;
+
             font-family: Georgia, serif;
             font-size: 34px;
             color: #34495e;
         }
 
-        /* ---------------------------------------
+
+        /* =========================
            SECTIONS
-        --------------------------------------- */
+        ========================= */
 
         section {
             padding: 58px 0;
@@ -229,9 +264,10 @@
             margin-bottom: 28px;
         }
 
-        /* ---------------------------------------
+
+        /* =========================
            RESEARCH
-        --------------------------------------- */
+        ========================= */
 
         .research-grid {
             display: grid;
@@ -258,15 +294,18 @@
             color: #666d75;
         }
 
-        /* ---------------------------------------
+
+        /* =========================
            PUBLICATIONS
-        --------------------------------------- */
+        ========================= */
 
         .publication {
             display: grid;
             grid-template-columns: 75px 1fr;
             gap: 20px;
+
             padding: 28px 0;
+
             border-top: 1px solid #eceef0;
         }
 
@@ -283,7 +322,9 @@
         .publication h3 {
             font-size: 19px;
             line-height: 1.45;
+
             margin: 0 0 8px;
+
             font-weight: 600;
         }
 
@@ -311,36 +352,10 @@
             margin-top: 26px;
         }
 
-        /* ---------------------------------------
-           EXPERIENCE
-        --------------------------------------- */
 
-        .timeline-item {
-            display: grid;
-            grid-template-columns: 170px 1fr;
-            gap: 25px;
-            margin-bottom: 28px;
-        }
-
-        .timeline-date {
-            color: #858c94;
-            font-size: 14px;
-        }
-
-        .timeline-content strong {
-            display: block;
-            color: #262a2f;
-            margin-bottom: 3px;
-        }
-
-        .timeline-content span {
-            color: #707780;
-            font-size: 14px;
-        }
-
-        /* ---------------------------------------
-           SKILLS
-        --------------------------------------- */
+        /* =========================
+           METHODS
+        ========================= */
 
         .tags {
             display: flex;
@@ -351,19 +366,24 @@
         .tag {
             background: #f4f6f8;
             border: 1px solid #e1e4e8;
+
             border-radius: 20px;
+
             padding: 7px 12px;
+
             font-size: 13px;
             color: #4d545c;
         }
 
-        /* ---------------------------------------
+
+        /* =========================
            FOOTER
-        --------------------------------------- */
+        ========================= */
 
         footer {
             border-top: 1px solid #e6e8eb;
             padding: 38px 0;
+
             color: #858c94;
             font-size: 13px;
         }
@@ -374,9 +394,10 @@
             gap: 25px;
         }
 
-        /* ---------------------------------------
+
+        /* =========================
            MOBILE
-        --------------------------------------- */
+        ========================= */
 
         @media (max-width: 720px) {
 
@@ -405,11 +426,6 @@
                 gap: 6px;
             }
 
-            .timeline-item {
-                grid-template-columns: 1fr;
-                gap: 5px;
-            }
-
             .footer-inner {
                 flex-direction: column;
             }
@@ -421,7 +437,9 @@
 
 <body>
 
+
 <header>
+
     <div class="container topbar">
 
         <div class="site-name">
@@ -429,17 +447,29 @@
         </div>
 
         <nav>
-            <a href="#about">About</a>
-            <a href="#research">Research</a>
-            <a href="#publications">Publications</a>
-            <a href="#experience">Experience</a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#research">
+                Research
+            </a>
+
+            <a href="#publications">
+                Publications
+            </a>
+
         </nav>
 
     </div>
+
 </header>
 
 
+
 <main>
+
 
 <section class="hero">
 
@@ -447,14 +477,12 @@
 
         <div>
 
-            <h1>Mehdi Arfaoui</h1>
+            <h1>
+                Mehdi Arfaoui
+            </h1>
 
             <div class="hero-title">
                 Theoretical Condensed Matter Physicist
-            </div>
-
-            <div class="affiliation">
-                CEA Saclay - SPEC
             </div>
 
             <p class="intro">
@@ -466,63 +494,179 @@
 
             </p>
 
-            <div class="profile-links">
+
+            <div class="social-links">
+
+
+                <!-- GOOGLE SCHOLAR -->
+
+                <a
+                    href="YOUR_GOOGLE_SCHOLAR_URL"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Google Scholar"
+                    title="Google Scholar"
+                >
+
+                    <img
+                        src="https://cdn.simpleicons.org/googlescholar"
+                        alt="Google Scholar"
+                    >
+
+                </a>
+
+
+                <!-- ORCID -->
+
+                <a
+                    href="YOUR_ORCID_URL"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="ORCID"
+                    title="ORCID"
+                >
+
+                    <img
+                        src="https://cdn.simpleicons.org/orcid"
+                        alt="ORCID"
+                    >
+
+                </a>
+
+
+                <!-- HAL -->
 
                 <a
                     href="https://cv.hal.science/mehdi-arfaoui-x"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="HAL"
+                    title="HAL"
                 >
-                    HAL
+
+                    <img
+                        src="https://cdn.simpleicons.org/hal"
+                        alt="HAL"
+                    >
+
                 </a>
 
-                <a href="#publications">
-                    Publications
+
+                <!-- RESEARCHGATE -->
+
+                <a
+                    href="YOUR_RESEARCHGATE_URL"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="ResearchGate"
+                    title="ResearchGate"
+                >
+
+                    <img
+                        src="https://cdn.simpleicons.org/researchgate"
+                        alt="ResearchGate"
+                    >
+
                 </a>
 
-                <a href="#research">
-                    Research
+
+                <!-- LINKEDIN -->
+
+                <a
+                    href="YOUR_LINKEDIN_URL"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                    title="LinkedIn"
+                >
+
+                    <img
+                        src="https://cdn.simpleicons.org/linkedin"
+                        alt="LinkedIn"
+                    >
+
                 </a>
 
-                <a href="#experience">
-                    Experience
+
+                <!-- X / TWITTER -->
+
+                <a
+                    href="YOUR_TWITTER_URL"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="X / Twitter"
+                    title="X / Twitter"
+                >
+
+                    <img
+                        src="https://cdn.simpleicons.org/x"
+                        alt="X / Twitter"
+                    >
+
                 </a>
+
+
+                <!-- GITHUB -->
+
+                <a
+                    href="https://github.com/arfaouim"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
+                    title="GitHub"
+                >
+
+                    <img
+                        src="https://cdn.simpleicons.org/github"
+                        alt="GitHub"
+                    >
+
+                </a>
+
 
             </div>
 
         </div>
 
+
         <div class="initial-box">
             MA
         </div>
 
+
     </div>
 
 </section>
+
 
 
 <section id="about">
 
     <div class="container">
 
-        <h2>About</h2>
+        <h2>
+            About
+        </h2>
 
         <p class="section-intro">
 
             My research focuses on the microscopic description of
             light-matter interaction in low-dimensional quantum materials.
-            I am particularly interested in excitonic states, bright-dark
-            exciton physics, carrier and valley dynamics, nonlinear optical
-            response and ultrafast spectroscopy.
+
+            I am particularly interested in excitonic states,
+            bright-dark exciton physics, carrier and valley dynamics,
+            nonlinear optical response and ultrafast spectroscopy.
 
         </p>
 
+
         <p class="section-intro">
 
-            I use density functional theory, GW quasiparticle calculations,
-            the Bethe-Salpeter equation, density-matrix approaches and
-            effective theoretical models to connect electronic structure
-            with optical observables.
+            I use density functional theory,
+            GW quasiparticle calculations,
+            the Bethe-Salpeter equation,
+            density-matrix approaches and effective theoretical models
+            to connect electronic structure with optical observables.
 
         </p>
 
@@ -531,57 +675,91 @@
 </section>
 
 
+
 <section id="research">
 
     <div class="container">
 
-        <h2>Research Interests</h2>
+        <h2>
+            Research Interests
+        </h2>
+
 
         <div class="research-grid">
 
+
             <div class="research-item">
 
-                <h3>Excitons</h3>
+                <h3>
+                    Excitons
+                </h3>
 
                 <p>
-                    Bright and dark excitons, Davydov splitting,
-                    interlayer excitons and exciton dynamics.
+
+                    Bright and dark excitons,
+                    Davydov splitting,
+                    interlayer excitons
+                    and exciton dynamics.
+
                 </p>
 
             </div>
 
+
+
             <div class="research-item">
 
-                <h3>2D Quantum Materials</h3>
+                <h3>
+                    2D Quantum Materials
+                </h3>
 
                 <p>
-                    Transition-metal dichalcogenides, hBN,
-                    layered semiconductors and van der Waals systems.
+
+                    Transition-metal dichalcogenides,
+                    hBN,
+                    layered semiconductors
+                    and van der Waals systems.
+
                 </p>
 
             </div>
 
+
+
             <div class="research-item">
 
-                <h3>Many-Body Theory</h3>
+                <h3>
+                    Many-Body Theory
+                </h3>
 
                 <p>
-                    GW quasiparticle corrections, Bethe-Salpeter equation
+
+                    GW quasiparticle corrections,
+                    Bethe-Salpeter equation
                     and electron-hole interactions.
+
                 </p>
 
             </div>
+
+
 
             <div class="research-item">
 
-                <h3>Nonlinear Optics</h3>
+                <h3>
+                    Nonlinear Optics
+                </h3>
 
                 <p>
-                    Difference-frequency generation, terahertz response
+
+                    Difference-frequency generation,
+                    terahertz response
                     and nonlinear optical spectroscopy.
+
                 </p>
 
             </div>
+
 
         </div>
 
@@ -590,11 +768,14 @@
 </section>
 
 
+
 <section id="publications">
 
     <div class="container">
 
-        <h2>Selected Publications</h2>
+        <h2>
+            Selected Publications
+        </h2>
 
 
         <article class="publication">
@@ -606,24 +787,33 @@
             <div>
 
                 <h3>
+
                     Fast interlayer energy transfer from the lower bandgap
                     MoS<sub>2</sub> to the higher bandgap WS<sub>2</sub>
+
                 </h3>
 
+
                 <div class="authors">
+
                     Gayatri Gayatri,
                     <strong>Mehdi Arfaoui</strong>,
                     Debashish Das,
                     et al.
+
                 </div>
 
+
                 <div class="journal">
+
                     npj 2D Materials and Applications
+
                 </div>
 
             </div>
 
         </article>
+
 
 
         <article class="publication">
@@ -635,20 +825,29 @@
             <div>
 
                 <h3>
+
                     Optical Absorption in Indirect Semiconductor
                     to Semimetal PtSe<sub>2</sub> Arises from Direct Transitions
+
                 </h3>
 
+
                 <div class="authors">
+
                     Marin Tharrault,
                     Sabrine Ayari,
                     <strong>Mehdi Arfaoui</strong>,
                     et al.
+
                 </div>
 
+
                 <div class="journal">
+
                     Physical Review Letters 134, 066901
+
                 </div>
+
 
                 <div class="pub-links">
 
@@ -667,6 +866,7 @@
         </article>
 
 
+
         <article class="publication">
 
             <div class="year">
@@ -676,19 +876,28 @@
             <div>
 
                 <h3>
+
                     Probing the exciton spin-valley depolarization with
                     spin-momentum-valley locked unbound states using tr-ARPES
+
                 </h3>
 
+
                 <div class="authors">
+
                     <strong>Mehdi Arfaoui</strong>,
                     Robson Ferreira,
                     Sihem Jaziri
+
                 </div>
 
+
                 <div class="journal">
+
                     Physical Review Research 6, 043243
+
                 </div>
+
 
                 <div class="pub-links">
 
@@ -707,6 +916,7 @@
         </article>
 
 
+
         <article class="publication">
 
             <div class="year">
@@ -716,24 +926,33 @@
             <div>
 
                 <h3>
+
                     Optical properties of orthorhombic germanium sulfide:
                     unveiling the anisotropic nature of Wannier excitons
+
                 </h3>
 
+
                 <div class="authors">
+
                     <strong>Mehdi Arfaoui</strong>,
                     Natalia Zawadzka,
                     Sabrine Ayari,
                     et al.
+
                 </div>
 
+
                 <div class="journal">
+
                     Nanoscale
+
                 </div>
 
             </div>
 
         </article>
+
 
 
         <div class="all-pubs">
@@ -743,7 +962,9 @@
                 target="_blank"
                 rel="noopener noreferrer"
             >
+
                 Complete publication list on HAL
+
             </a>
 
         </div>
@@ -753,107 +974,57 @@
 </section>
 
 
-<section id="experience">
-
-    <div class="container">
-
-        <h2>Experience</h2>
-
-
-        <div class="timeline-item">
-
-            <div class="timeline-date">
-                2025 - present
-            </div>
-
-            <div class="timeline-content">
-
-                <strong>
-                    Postdoctoral Researcher
-                </strong>
-
-                <span>
-                    CEA Saclay - SPEC
-                </span>
-
-            </div>
-
-        </div>
-
-
-        <div class="timeline-item">
-
-            <div class="timeline-date">
-                2024 - 2025
-            </div>
-
-            <div class="timeline-content">
-
-                <strong>
-                    Postdoctoral Researcher
-                </strong>
-
-                <span>
-                    ONERA / LEM
-                </span>
-
-            </div>
-
-        </div>
-
-
-        <div class="timeline-item">
-
-            <div class="timeline-date">
-                2020 - 2024
-            </div>
-
-            <div class="timeline-content">
-
-                <strong>
-                    Ph.D. in Theoretical Physics
-                </strong>
-
-                <span>
-                    Université Tunis El Manar
-                </span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
 
 <section>
 
     <div class="container">
 
-        <h2>Methods & Tools</h2>
+        <h2>
+            Methods & Tools
+        </h2>
+
 
         <div class="tags">
 
-            <span class="tag">DFT</span>
+            <span class="tag">
+                DFT
+            </span>
 
-            <span class="tag">GW</span>
+            <span class="tag">
+                GW
+            </span>
 
-            <span class="tag">Bethe-Salpeter Equation</span>
+            <span class="tag">
+                Bethe-Salpeter Equation
+            </span>
 
-            <span class="tag">Many-Body Perturbation Theory</span>
+            <span class="tag">
+                Many-Body Perturbation Theory
+            </span>
 
-            <span class="tag">Density-Matrix Formalism</span>
+            <span class="tag">
+                Density-Matrix Formalism
+            </span>
 
-            <span class="tag">Exciton Models</span>
+            <span class="tag">
+                Exciton Models
+            </span>
 
-            <span class="tag">Nonlinear Optics</span>
+            <span class="tag">
+                Nonlinear Optics
+            </span>
 
-            <span class="tag">Quantum ESPRESSO</span>
+            <span class="tag">
+                Quantum ESPRESSO
+            </span>
 
-            <span class="tag">Yambo</span>
+            <span class="tag">
+                Yambo
+            </span>
 
-            <span class="tag">Python</span>
+            <span class="tag">
+                Python
+            </span>
 
         </div>
 
@@ -861,7 +1032,9 @@
 
 </section>
 
+
 </main>
+
 
 
 <footer>
@@ -883,6 +1056,7 @@
     </div>
 
 </footer>
+
 
 </body>
 </html>
