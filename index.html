@@ -1,581 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quantum Excitations Theory Group</title>
-  <meta name="description" content="Research group website for excitons, optical spectroscopy, first-principles simulations, and interactive apps." />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+
+    <title>Mehdi Arfaoui - Theoretical Condensed Matter Physics</title>
+
+    <meta name="description"
+          content="Mehdi Arfaoui, theoretical condensed matter physicist. Research on 2D materials, excitons, DFT, GW-BSE, nonlinear optics and many-body physics.">
+
+    <meta name="author" content="Mehdi Arfaoui">
+
+    <meta name="robots" content="index, follow">
+
+    <meta name="keywords"
+          content="Mehdi Arfaoui, condensed matter physics, theoretical physics,
+          DFT, GW, BSE, excitons, 2D materials, hBN, MoS2, MoSe2, PtSe2">
+
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="#home">
-        <div class="brand-badge"></div>
-        <div class="brand-text">
-          <strong>Quantum Excitations Theory Group</strong>
-          <span>Excitons · Optical Spectroscopy · First-Principles Simulation · Interactive Apps</span>
-        </div>
-      </a>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">Menu</button>
+<header>
 
-      <nav class="nav-links" id="navLinks">
-        <a href="#home" class="active">Home</a>
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#members">Members</a>
-        <a href="#software">Software</a>
-        <a href="#apps">Apps</a>
-        <a href="#join">Join Us</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+<h1>Mehdi Arfaoui</h1>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-        <div class="hero-card">
-          <div class="eyebrow">Theory · Computation · Spectroscopy</div>
-          <h1>Excited states in quantum materials</h1>
-          <p class="hero-lead">
-            We investigate excitons, optical response, and non-equilibrium processes in low-dimensional materials using many-body theory,
-            ab initio simulations, and scientific software development.
-          </p>
+<p>
+Theoretical Condensed Matter Physicist
+</p>
 
-          <div class="cta-row">
-            <a class="btn btn-primary" href="#research">Explore research</a>
-            <a class="btn btn-secondary" href="#join">Join the group</a>
-          </div>
+<p>
+DFT | GW-BSE | Excitons | 2D Materials | Nonlinear Optics
+</p>
 
-          <div class="tag-row">
-            <a class="tag" href="#research" data-filter-target="Excitons">Excitons in 2D</a>
-            <a class="tag" href="#research" data-filter-target="Linear optics">Linear optics</a>
-            <a class="tag" href="#research" data-filter-target="Nonlinear optics">Nonlinear optics</a>
-            <a class="tag" href="#research" data-filter-target="Transport">Transport</a>
-            <a class="tag" href="#research" data-filter-target="Simulation">Simulation</a>
-            <a class="tag" href="#research" data-filter-target="Software">Software</a>
-            <a class="tag" href="#apps">Interactive apps</a>
-          </div>
+</header>
 
-          <div class="metrics">
-            <div class="metric">
-              <strong>6</strong>
-              <span>Main research themes</span>
-            </div>
-            <div class="metric">
-              <strong>12+</strong>
-              <span>Projects & tools</span>
-            </div>
-            <div class="metric">
-              <strong>Open</strong>
-              <span>Collaborations and applications</span>
-            </div>
-          </div>
-        </div>
 
-        <div class="hero-side">
-          <div class="panel figure-box">
-            <div class="figure-grid"></div>
-            <div class="hex"></div>
-            <div class="hex small"></div>
-            <div class="figure-caption">
-              Replace this illustration with an exciton wavefunction, a band-structure figure, or a nonlinear spectrum from your work.
-            </div>
-          </div>
+<section id="about">
 
-          <div class="mini-stack">
-            <div class="mini-card">
-              <h3>Latest highlight</h3>
-              <p>Symmetry-driven excitonic selection rules in layered materials and van der Waals heterostructures.</p>
-            </div>
-            <div class="mini-card">
-              <h3>Methods</h3>
-              <p>DFT · GW · BSE · model Hamiltonians · post-processing workflows · interactive visualizations.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<h2>About</h2>
 
-    <section id="research">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="eyebrow">Research themes</div>
-            <h2>What the group works on</h2>
-          </div>
-          <p>
-            Use this section to present the scientific identity of the team. The filters below can be used as topic tags to guide visitors to a subfield quickly.
-          </p>
-        </div>
+<p>
+I am a theoretical condensed matter physicist working on the
+electronic, optical and excitonic properties of two-dimensional
+and van der Waals materials.
+</p>
 
-        <div class="filters" id="researchFilters">
-          <button class="filter-btn active" data-filter="All">All</button>
-          <button class="filter-btn" data-filter="Excitons">Excitons</button>
-          <button class="filter-btn" data-filter="Linear optics">Linear optics</button>
-          <button class="filter-btn" data-filter="Nonlinear optics">Nonlinear optics</button>
-          <button class="filter-btn" data-filter="Transport">Transport</button>
-          <button class="filter-btn" data-filter="Simulation">Simulation</button>
-          <button class="filter-btn" data-filter="Software">Software</button>
-        </div>
+</section>
 
-        <div class="grid-3" style="margin-top:18px" id="researchGrid">
-          <article class="card research-card" data-tags="Excitons Simulation">
-            <div class="research-icon">✦</div>
-            <div>
-              <h3>Excitons in 2D materials</h3>
-              <p>Bound electron–hole excitations in monolayers, bilayers, twisted systems, and heterostructures, with emphasis on symmetry, valley physics, and screening.</p>
-            </div>
-            <div class="tag-row">
-              <span class="tag">Excitons</span>
-              <span class="tag">2D</span>
-              <span class="tag">GW-BSE</span>
-            </div>
-          </article>
 
-          <article class="card research-card" data-tags="Linear optics Simulation">
-            <div class="research-icon">◌</div>
-            <div>
-              <h3>Linear optical spectroscopy</h3>
-              <p>Absorption, oscillator strength, polarization selection rules, band-resolved contributions, and excitonic fingerprints in optical spectra.</p>
-            </div>
-            <div class="tag-row">
-              <span class="tag">Linear optics</span>
-              <span class="tag">Spectroscopy</span>
-            </div>
-          </article>
+<section id="research">
 
-          <article class="card research-card" data-tags="Nonlinear optics Simulation">
-            <div class="research-icon">∞</div>
-            <div>
-              <h3>Nonlinear optical response</h3>
-              <p>Second-order and higher-order response, SHG, DFG, SFG, and excitonic effects in nonlinear spectroscopy of quantum materials.</p>
-            </div>
-            <div class="tag-row">
-              <span class="tag">Nonlinear optics</span>
-              <span class="tag">χ²</span>
-            </div>
-          </article>
+<h2>Research Interests</h2>
 
-          <article class="card research-card" data-tags="Transport Excitons">
-            <div class="research-icon">⇄</div>
-            <div>
-              <h3>Transport and dynamics</h3>
-              <p>Energy transfer, phonon-assisted processes, valley/spin depolarization, exciton diffusion, and time-dependent phenomena in layered systems.</p>
-            </div>
-            <div class="tag-row">
-              <span class="tag">Transport</span>
-              <span class="tag">Dynamics</span>
-            </div>
-          </article>
+<ul>
+    <li>Two-dimensional materials</li>
+    <li>Density Functional Theory (DFT)</li>
+    <li>Many-body perturbation theory (GW-BSE)</li>
+    <li>Excitons</li>
+    <li>Nonlinear optical spectroscopy</li>
+    <li>Ultrafast and time-resolved phenomena</li>
+</ul>
 
-          <article class="card research-card" data-tags="Simulation">
-            <div class="research-icon">⌘</div>
-            <div>
-              <h3>Ab initio simulation</h3>
-              <p>First-principles electronic structure and excited-state methods, including DFT, GW, BSE, dielectric screening, and model-to-ab-initio connections.</p>
-            </div>
-            <div class="tag-row">
-              <span class="tag">Simulation</span>
-              <span class="tag">First principles</span>
-            </div>
-          </article>
+</section>
 
-          <article class="card research-card" data-tags="Software Simulation">
-            <div class="research-icon">⚙</div>
-            <div>
-              <h3>Software and workflows</h3>
-              <p>Reproducible pipelines, Python post-processing, visualization tools, data analysis, and web interfaces for excited-state calculations.</p>
-            </div>
-            <div class="tag-row">
-              <span class="tag">Software</span>
-              <span class="tag">Python</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
 
-    <section id="publications">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="eyebrow">Selected output</div>
-            <h2>Publications</h2>
-          </div>
-          <p>
-            Add your own papers here. You can filter by topic and link each item to a DOI, arXiv page, code repository, or supplementary material.
-          </p>
-        </div>
+<section id="publications">
 
-        <div class="filters" id="pubFilters">
-          <button class="filter-btn active" data-filter="All">All</button>
-          <button class="filter-btn" data-filter="Excitons">Excitons</button>
-          <button class="filter-btn" data-filter="Linear optics">Linear optics</button>
-          <button class="filter-btn" data-filter="Nonlinear optics">Nonlinear optics</button>
-          <button class="filter-btn" data-filter="Transport">Transport</button>
-          <button class="filter-btn" data-filter="Methods">Methods</button>
-          <button class="filter-btn" data-filter="Mehdi">Mehdi</button>
-          <button class="filter-btn" data-filter="Theory team">Theory team</button>
-        </div>
+<h2>Publications</h2>
 
-        <div class="grid-2" style="margin-top:18px" id="pubGrid">
-          <article class="card pub-card" data-tags="Excitons Methods Mehdi Theory team">
-            <div class="pub-meta">2026 · Phys. Rev. B</div>
-            <h3>Excitonic signatures in layered boron nitride: symmetry, screening, and interlayer coupling</h3>
-            <p>Template text for a paper description. Replace this with one short sentence that explains the scientific contribution and why it matters.</p>
-            <div class="tag-row">
-              <span class="tag">Excitons</span>
-              <span class="tag">Methods</span>
-            </div>
-            <div class="pub-links">
-              <a class="link-chip" href="#">DOI</a>
-              <a class="link-chip" href="#">arXiv</a>
-              <a class="link-chip" href="#">Code</a>
-            </div>
-          </article>
+<article>
 
-          <article class="card pub-card" data-tags="Nonlinear optics Methods Mehdi Theory team">
-            <div class="pub-meta">2026 · Journal name</div>
-            <h3>Excitonic effects in second-order optical response of low-dimensional materials</h3>
-            <p>Short summary line for nonlinear optical spectroscopy, theory development, or computational analysis.</p>
-            <div class="tag-row">
-              <span class="tag">Nonlinear optics</span>
-              <span class="tag">Methods</span>
-            </div>
-            <div class="pub-links">
-              <a class="link-chip" href="#">DOI</a>
-              <a class="link-chip" href="#">PDF</a>
-              <a class="link-chip" href="#">Slides</a>
-            </div>
-          </article>
+<h3>
+Title of your publication
+</h3>
 
-          <article class="card pub-card" data-tags="Linear optics Excitons Theory team">
-            <div class="pub-meta">2025 · Journal name</div>
-            <h3>Polarization-resolved optical selection rules in van der Waals heterostructures</h3>
-            <p>Short one-line description focusing on spectra, oscillator strength, exciton character, or symmetry analysis.</p>
-            <div class="tag-row">
-              <span class="tag">Linear optics</span>
-              <span class="tag">Excitons</span>
-            </div>
-            <div class="pub-links">
-              <a class="link-chip" href="#">DOI</a>
-              <a class="link-chip" href="#">arXiv</a>
-            </div>
-          </article>
+<p>
+<strong>Mehdi Arfaoui</strong>, Author 2, Author 3
+</p>
 
-          <article class="card pub-card" data-tags="Transport Excitons Mehdi">
-            <div class="pub-meta">2025 · Journal name</div>
-            <h3>Phonon-assisted transfer and non-equilibrium excitonic dynamics in layered materials</h3>
-            <p>Use one sentence to summarize transfer rates, thermalization, transport, or time-resolved phenomena.</p>
-            <div class="tag-row">
-              <span class="tag">Transport</span>
-              <span class="tag">Excitons</span>
-            </div>
-            <div class="pub-links">
-              <a class="link-chip" href="#">DOI</a>
-              <a class="link-chip" href="#">Data</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+<p>
+Physical Review Letters, 2025
+</p>
 
-    <section id="members">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="eyebrow">People</div>
-            <h2>Members</h2>
-          </div>
-          <p>
-            Replace these placeholders with current members, collaborators, alumni, or supervisors. Add photos later by replacing the initials cards.
-          </p>
-        </div>
+<a href="https://doi.org/XXXXX">
+DOI
+</a>
 
-        <div class="filters" id="memberFilters">
-          <button class="filter-btn active" data-filter="All">All</button>
-          <button class="filter-btn" data-filter="Excitons">Excitons</button>
-          <button class="filter-btn" data-filter="Linear optics">Linear optics</button>
-          <button class="filter-btn" data-filter="Nonlinear optics">Nonlinear optics</button>
-          <button class="filter-btn" data-filter="Transport">Transport</button>
-          <button class="filter-btn" data-filter="Simulation">Simulation</button>
-          <button class="filter-btn" data-filter="Software">Software</button>
-        </div>
+</article>
 
-        <div class="grid-3" id="memberGrid">
-          <article class="card member-card" data-tags="Excitons Nonlinear optics Simulation Software">
-            <div class="member-top">
-              <div class="avatar">MA</div>
-              <div>
-                <h3>Mehdi Arfaoui</h3>
-                <div class="member-role">Postdoctoral researcher</div>
-              </div>
-            </div>
-            <div class="member-meta">Excitons · GW-BSE · Nonlinear optics · 2D materials</div>
-            <div class="tag-row">
-              <span class="tag">Excitons</span>
-              <span class="tag">Nonlinear optics</span>
-              <span class="tag">Simulation</span>
-              <span class="tag">Software</span>
-            </div>
-            <p>Short bio: one or two lines about your expertise, current projects, and scientific interests.</p>
-            <div class="member-links">
-              <a class="link-chip" href="mailto:your.email@domain.com">Email</a>
-              <a class="link-chip" href="#">Scholar</a>
-              <a class="link-chip" href="#">GitHub</a>
-              <a class="link-chip" href="#">ORCID</a>
-            </div>
-          </article>
 
-          <article class="card member-card" data-tags="Excitons Linear optics Simulation">
-            <div class="member-top">
-              <div class="avatar">SL</div>
-              <div>
-                <h3>Supervisor / PI Name</h3>
-                <div class="member-role">Principal investigator</div>
-              </div>
-            </div>
-            <div class="member-meta">Electronic structure · Optical spectroscopy · Theory</div>
-            <div class="tag-row">
-              <span class="tag">Excitons</span>
-              <span class="tag">Linear optics</span>
-              <span class="tag">Simulation</span>
-            </div>
-            <p>Add a concise research description and contact links for the member.</p>
-            <div class="member-links">
-              <a class="link-chip" href="#">Email</a>
-              <a class="link-chip" href="#">Scholar</a>
-              <a class="link-chip" href="#">Lab page</a>
-            </div>
-          </article>
+<article>
 
-          <article class="card member-card" data-tags="Transport Simulation Software">
-            <div class="member-top">
-              <div class="avatar">AB</div>
-              <div>
-                <h3>Collaborator Name</h3>
-                <div class="member-role">Collaborator</div>
-              </div>
-            </div>
-            <div class="member-meta">Modeling · Dynamics · Computation</div>
-            <div class="tag-row">
-              <span class="tag">Transport</span>
-              <span class="tag">Simulation</span>
-              <span class="tag">Software</span>
-            </div>
-            <p>Use this card for a co-supervisor, collaborator, PhD student, or alumni member.</p>
-            <div class="member-links">
-              <a class="link-chip" href="#">Email</a>
-              <a class="link-chip" href="#">Website</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+<h3>
+Title of another publication
+</h3>
 
-    <section id="software">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="eyebrow">Resources</div>
-            <h2>Software and research tools</h2>
-          </div>
-          <p>
-            This section is useful if you want the site to act not only as a group page, but also as a hub for code, workflows, tutorials, and visualization tools.
-          </p>
-        </div>
+<p>
+Author 1, <strong>Mehdi Arfaoui</strong>, Author 3
+</p>
 
-        <div class="grid-3">
-          <article class="card">
-            <h3>Post-processing workflows</h3>
-            <p>Scripts and notebooks for band analysis, exciton decomposition, optical spectra, and nonlinear response.</p>
-            <div class="pub-links">
-              <a class="link-chip" href="#">Repository</a>
-              <a class="link-chip" href="#">Docs</a>
-            </div>
-          </article>
+<p>
+Nano Letters, 2024
+</p>
 
-          <article class="card">
-            <h3>Interactive visualization</h3>
-            <p>Web apps or dashboards to visualize exciton weights, band structures, transition maps, and spectra.</p>
-            <div class="pub-links">
-              <a class="link-chip" href="#">Demo</a>
-              <a class="link-chip" href="#">Source</a>
-            </div>
-          </article>
+<a href="https://doi.org/XXXXX">
+DOI
+</a>
 
-          <article class="card">
-            <h3>Teaching and tutorials</h3>
-            <p>Short notes, slides, or computational tutorials introducing DFT, GW, BSE, or workflow reproducibility.</p>
-            <div class="pub-links">
-              <a class="link-chip" href="#">Slides</a>
-              <a class="link-chip" href="#">Notes</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+</article>
 
-    <section id="apps">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="eyebrow">Interactive tools</div>
-            <h2>Web apps</h2>
-          </div>
-          <p>
-            You can dedicate a full tab to real interactive web apps: dashboards, spectrum explorers, exciton viewers, data browsers, teaching demos, and post-processing tools.
-          </p>
-        </div>
+</section>
 
-        <div class="grid-3">
-          <article class="card">
-            <h3>Exciton explorer</h3>
-            <p>Interactive visualization of exciton energies, oscillator strengths, degeneracies, and k-space weights.</p>
-            <div class="tag-row">
-              <span class="tag">App</span>
-              <span class="tag">Excitons</span>
-            </div>
-            <div class="pub-links">
-              <a class="link-chip" href="#">Live demo</a>
-              <a class="link-chip" href="#">Repository</a>
-            </div>
-          </article>
 
-          <article class="card">
-            <h3>Nonlinear spectra dashboard</h3>
-            <p>Interactive browser for χ² spectra, peak assignments, channel decomposition, and polarization-resolved analysis.</p>
-            <div class="tag-row">
-              <span class="tag">App</span>
-              <span class="tag">Nonlinear optics</span>
-            </div>
-            <div class="pub-links">
-              <a class="link-chip" href="#">Live demo</a>
-              <a class="link-chip" href="#">Docs</a>
-            </div>
-          </article>
+<section id="profiles">
 
-          <article class="card">
-            <h3>Teaching and workflow apps</h3>
-            <p>Small online tools for band-path inspection, input generation, convergence tracking, and tutorial-style demos.</p>
-            <div class="tag-row">
-              <span class="tag">App</span>
-              <span class="tag">Teaching</span>
-            </div>
-            <div class="pub-links">
-              <a class="link-chip" href="#">Open app</a>
-              <a class="link-chip" href="#">Source</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+<h2>Academic Profiles</h2>
 
-    <section id="join">
-      <div class="container join-grid">
-        <div class="callout">
-          <div class="eyebrow">Opportunities</div>
-          <h2>Join us</h2>
-          <p>
-            We welcome applications from students and researchers interested in excited states, computational spectroscopy, and quantum materials.
-          </p>
-          <ul class="list-clean">
-            <li>Postdoctoral projects in many-body perturbation theory and excited-state calculations</li>
-            <li>PhD topics in excitons, optical response, and low-dimensional materials</li>
-            <li>Master internships in simulation workflows, visualization, and data analysis</li>
-            <li>Collaborative projects at the interface of theory, computation, and experiment</li>
-          </ul>
-          <div class="pub-links" style="margin-top:18px">
-            <a class="link-chip" href="mailto:your.email@domain.com">Apply by email</a>
-            <a class="link-chip" href="#contact">Contact details</a>
-          </div>
-        </div>
+<p>
+<a href="https://cv.hal.science/mehdi-arfaoui-x">
+HAL
+</a>
+</p>
 
-        <div>
-          <article class="card join-card">
-            <h3>What to send</h3>
-            <ul class="list-clean">
-              <li>CV or short academic résumé</li>
-              <li>Brief statement of interest</li>
-              <li>Publication list or project summary</li>
-              <li>Optional code portfolio or GitHub profile</li>
-            </ul>
-          </article>
+<!-- Add ORCID and Google Scholar here -->
 
-          <article class="card join-card" style="margin-top:18px">
-            <h3>What the group offers</h3>
-            <ul class="list-clean">
-              <li>Training in theory and first-principles simulation</li>
-              <li>Close interaction with spectroscopy and materials science</li>
-              <li>Support for software, figures, and reproducible workflows</li>
-              <li>Conference and collaboration opportunities</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
+</section>
 
-    <section id="contact">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="eyebrow">Get in touch</div>
-            <h2>Contact</h2>
-          </div>
-          <p>
-            Keep this section simple: institution, city, email, and external links. You can also add a map or a small affiliation logo later.
-          </p>
-        </div>
 
-        <div class="grid-2">
-          <article class="card">
-            <h3>Group contact</h3>
-            <p>
-              Quantum Excitations Theory Group<br />
-              Your institution or laboratory name<br />
-              City, Country
-            </p>
-            <div class="pub-links">
-              <a class="link-chip" href="mailto:your.email@domain.com">your.email@domain.com</a>
-              <a class="link-chip" href="#">Google Scholar</a>
-              <a class="link-chip" href="#">GitHub</a>
-            </div>
-          </article>
+<footer>
 
-          <article class="card news-card">
-            <div class="news-meta">Latest note</div>
-            <h3>Add a small news block here</h3>
-            <p>Example: new paper accepted, invited talk, conference participation, software release, or open position announcement.</p>
-            <div class="tag-row">
-              <span class="tag">News</span>
-              <span class="tag">Update</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-  </main>
+<p>
+Mehdi Arfaoui - Theoretical Condensed Matter Physics
+</p>
 
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <strong>Quantum Excitations Theory Group</strong>
-        <p>Modern academic template for GitHub Pages.</p>
-      </div>
-      <div>
-        <strong>Quick links</strong>
-        <p><a href="#research">Research</a><br /><a href="#publications">Publications</a><br /><a href="#members">Members</a><br /><a href="#apps">Apps</a></p>
-      </div>
-      <div>
-        <strong>Customize next</strong>
-        <p>Replace placeholder text, add real links, upload figures, and update the member list.</p>
-      </div>
-    </div>
-  </footer>
+</footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
